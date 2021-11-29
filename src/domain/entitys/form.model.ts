@@ -1,6 +1,9 @@
 import { EmployeeModel } from "./employee.model";
 
-export interface FormModel extends EmployeeModel {
+interface IndexSignature {
+  [key: string]: boolean | string | void;
+}
+export interface FormModel extends EmployeeModel, IndexSignature {
   isFormInvalid: boolean;
   nameError?: string;
   birth_dateError?: string;
