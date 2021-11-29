@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import { UseContext } from "../../infra/context";
-import { FormModel } from "../../domain/models/form.model";
+import { UseContext } from "../../data/infra/context";
+import { FormModel } from "../../domain/entitys/form.model";
 
-import { makeRemoteAddEmployee } from "../../main/factories/usecases";
-import { makeFormValidation } from "../../main/factories/validation";
+import { makeRemoteAddEmployee } from "../../data/factories/usecases";
+import { makeFormValidation } from "../../validation/form-validation-factory";
 
 import Form from "./form";
 

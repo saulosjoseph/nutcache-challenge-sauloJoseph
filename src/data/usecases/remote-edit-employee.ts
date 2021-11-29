@@ -1,7 +1,7 @@
 import { AccessDeniedError, UnexpectedError } from "../../domain/errors";
-import { EmployeeModel } from "../../domain/models";
+import { EmployeeModel } from "../../domain/entitys";
 import { EditEmployee } from "../../domain/usecases";
-import { HttpClient, HttpStatusCode } from "../models/http/http-client";
+import { HttpClient, HttpStatusCode } from "../entitys/http/http-client";
 
 export class RemoteEditEmployee implements EditEmployee {
   constructor(

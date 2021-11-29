@@ -3,13 +3,13 @@ import { Button, Modal } from "react-bootstrap";
 
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
-import { EmployeeModel } from "../../domain/models";
+import { EmployeeModel } from "../../domain/entitys";
 import { DeleteEmployee } from "../../domain/usecases";
-import { makeFormValidation } from "../../main/factories/validation";
-import { makeRemoteEditEmployee } from "../../main/factories/usecases";
-import { FormModel } from "../../domain/models/form.model";
+import { makeFormValidation } from "../../validation/form-validation-factory";
+import { makeRemoteEditEmployee } from "../../data/factories/usecases";
+import { FormModel } from "../../domain/entitys/form.model";
 import Form from "./form";
-import { UseContext } from "../../infra/context";
+import { UseContext } from "../../data/infra/context";
 
 type Props = {
   employee: EmployeeModel;

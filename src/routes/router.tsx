@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React from "react";
-import { EmployeeList } from "../../presentation/pages";
-import { makeRemoteLoadEmployeeList } from "../factories/usecases/remote-load-employee-list-factory";
-import { ContextProvider } from "../../infra/context";
+import { EmployeeList } from "../presentation/pages";
+import { makeRemoteLoadEmployeeList } from "../data/factories/usecases/remote-load-employee-list-factory";
+import { ContextProvider } from "../data/infra/context";
 
 const Router: React.FC = () => {
   return (

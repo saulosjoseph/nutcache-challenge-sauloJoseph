@@ -1,5 +1,5 @@
 import React from "react";
-import { InitialStateModel } from "../../domain/models";
+import { InitialStateModel } from "../../../domain/entitys";
 
 const initialState: InitialStateModel = {
   employeeList: [],

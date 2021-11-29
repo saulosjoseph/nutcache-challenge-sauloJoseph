@@ -1,5 +1,5 @@
-import { ValidationComposite } from "../../composites";
-import { ValidationBuilder as Builder } from "../../builders";
+import { ValidationComposite } from "./validation-composite";
+import { ValidationBuilder as Builder } from "./validation-builder";
 
 export const makeFormValidation = (): ValidationComposite =>
   ValidationComposite.build([

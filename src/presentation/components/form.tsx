@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Button } from "react-bootstrap";
-import { FormModel } from "../../domain/models/form.model";
-import { Validation } from "../models/validation";
+import { FormModel } from "../../domain/entitys/form.model";
+import { Validation } from "../entitys/validation";
 type Props = {
   validation: Validation;
   handleGoBack: () => void;

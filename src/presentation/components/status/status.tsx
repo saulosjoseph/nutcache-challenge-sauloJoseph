@@ -2,7 +2,7 @@ import "./status-styles.scss";
 
 import React, { useEffect } from "react";
 import { Col, Container, Modal, Row, Spinner } from "react-bootstrap";
-import { UseContext } from "../../../infra/context";
+import { UseContext } from "../../../data/infra/context";
 
 const Status: React.FC = () => {
   const [state] = UseContext();

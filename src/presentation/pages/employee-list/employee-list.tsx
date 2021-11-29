@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import CardComponent from "../../components/card";
 import { LoadEmployeeList } from "../../../domain/usecases";
-import { makeRemoteDeleteEmployee } from "../../../main/factories/usecases";
+import { makeRemoteDeleteEmployee } from "../../../data/factories/usecases";
 import { Col, Container, Row } from "react-bootstrap";
 import Header from "../../components/header";
-import { UseContext } from "../../../infra/context";
+import { UseContext } from "../../../data/infra/context";
 import Status from "../../components/status/status";
 
 type Props = {

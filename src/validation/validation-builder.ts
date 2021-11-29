@@ -1,9 +1,9 @@
-import { FieldValidation } from "../../validation/models";
+import { FieldValidation } from "./field-validation-model";
 import {
   EmailValidation,
   RequiredFieldValidation,
   CpfValidation,
-} from "../../validation/validators";
+} from "./validators";
 
 export class ValidationBuilder {
   private constructor(
