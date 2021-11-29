@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from "react";
 import { Button } from "react-bootstrap";
 import { FormModel } from "../../domain/entitys/form.model";
@@ -19,7 +20,7 @@ const Form: React.FC<Props> = ({
 }: Props) => {
   const validate = (field: string): void => {
     const error = validation.validate(field, formData);
-    let auxFormData: FormModel = JSON.parse(JSON.stringify(formData));
+    let auxFormData: FormModel = { ...formData };
     auxFormData = {
       ...auxFormData,
       [`${field}Error`]: error,
@@ -80,9 +81,7 @@ const Form: React.FC<Props> = ({
             value={formData.name}
             onChange={onChange}
           />
-          <span className="ml-3">
-            {formData.nameError && formData.nameError}
-          </span>
+          <span className="ml-3">{formData.nameError}</span>
         </div>
         <div className="pb-3">
           <input
@@ -92,9 +91,7 @@ const Form: React.FC<Props> = ({
             value={formData.email}
             onChange={onChange}
           />
-          <span className="ml-3">
-            {formData.emailError && formData.emailError}
-          </span>
+          <span className="ml-3">{formData.emailError}</span>
         </div>
         <div className="pb-3">
           <p className="my-0">Birth date</p>
@@ -105,9 +102,7 @@ const Form: React.FC<Props> = ({
             value={formData.birth_date}
             onChange={onChange}
           />
-          <span className="ml-3">
-            {formData.birth_dateError && formData.birth_dateError}
-          </span>
+          <span className="ml-3">{formData.birth_dateError}</span>
         </div>
         <div className="pb-3">
           <select value={formData.gender || "gender"} onChange={onChangeGender}>
@@ -117,9 +112,7 @@ const Form: React.FC<Props> = ({
             <option value="M">M</option>
             <option value="F">F</option>
           </select>
-          <span className="ml-3">
-            {formData.genderError && formData.genderError}
-          </span>
+          <span className="ml-3">{formData.genderError}</span>
         </div>
         <div className="pb-3">
           <p className="my-0">Start date</p>
@@ -130,9 +123,7 @@ const Form: React.FC<Props> = ({
             value={formData.start_date}
             onChange={onChange}
           />
-          <span className="ml-3">
-            {formData.start_dateError && formData.start_dateError}
-          </span>
+          <span className="ml-3">{formData.start_dateError}</span>
         </div>
         <div className="pb-3">
           <select value={formData.team || "team"} onChange={onChangeTeam}>
@@ -143,9 +134,7 @@ const Form: React.FC<Props> = ({
             <option value="backend">Backend</option>
             <option value="mobile">Mobile</option>
           </select>
-          <span className="ml-3">
-            {formData.teamError && formData.teamError}
-          </span>
+          <span className="ml-3">{formData.teamError}</span>
         </div>
         <div className="pb-3">
           <input

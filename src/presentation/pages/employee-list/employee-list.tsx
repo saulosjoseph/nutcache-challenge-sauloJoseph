@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from "react";
 import CardComponent from "../../components/card";
 import { LoadEmployeeList } from "../../../domain/usecases";
